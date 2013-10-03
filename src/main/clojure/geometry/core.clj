@@ -1,4 +1,4 @@
-(ns {{ project }}.core)
+(ns geometry.core)
 
 (defn foo
   "I don't do a whole lot."

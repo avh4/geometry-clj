@@ -1,5 +1,5 @@
-(ns {{ project }}.core-test
-  (:use [{{ project }}.core])
+(ns geometry.core-test
+  (:use [geometry.core])
   (:use [midje.sweet]))
 
 (facts "about failing tests"
