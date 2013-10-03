@@ -1,5 +1,5 @@
 (ns net.avh4.geometry.rect
-  (:use [net.avh4.geometry.alignment]))
+  (:require [net.avh4.geometry.alignment :as alignment]))
 
 ;;; -> rect
 
@@ -16,10 +16,10 @@
 
 ;;; rect -> rect
 
-(defn- INSET [i] [1 (* -2 i)])
-(defn- OUTSET [i] [1 (* 2 i)])
-(def ^:private SAME [1 0])
-(defn- EXACTLY [i] [0 i])
+(defn- inset [i] [1 (* -2 i)])
+(defn- outset [i] [1 (* 2 i)])
+(def ^:private same [1 0])
+(defn- exactly [i] [0 i])
 
 (defn transform [[x y w h] [ax ay] [wm wk] [hm hk]]
   (let [nw (+ (* w wm) wk)
@@ -27,22 +27,22 @@
     [(+ x (* (- w nw) ax)) (+ y (* (- h nh) ay)) nw nh]))
 
 (defn inset [rect i]
-  (transform rect CENTER (INSET i) (INSET i)))
+  (transform rect alignment/center (inset i) (inset i)))
 
 (defn outset [rect i]
-  (transform rect CENTER (OUTSET i) (OUTSET i)))
+  (transform rect alignment/center (outset i) (outset i)))
 
 (defn top [rect i]
-  (transform rect TOP SAME (EXACTLY i)))
+  (transform rect alignment/top same (exactly i)))
 
 (defn left [rect i]
-  (transform rect LEFT (EXACTLY i) SAME))
+  (transform rect alignment/left (exactly i) same))
 
 (defn right [rect i]
-  (transform rect RIGHT (EXACTLY i) SAME))
+  (transform rect alignment/right (exactly i) same))
 
 (defn bottom [rect i]
-  (transform rect BOTTOM SAME (EXACTLY i)))
+  (transform rect alignment/bottom same (exactly i)))
 
 ;;; rect -> point
 

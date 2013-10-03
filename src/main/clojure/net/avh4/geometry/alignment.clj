@@ -1,7 +1,7 @@
 (ns net.avh4.geometry.alignment)
 
-(def CENTER [1/2 1/2])
-(def LEFT   [ 0  1/2])
-(def RIGHT  [ 1  1/2])
-(def TOP    [1/2  0 ])
-(def BOTTOM [1/2  1 ])
+(def center [1/2 1/2])
+(def left   [ 0  1/2])
+(def right  [ 1  1/2])
+(def top    [1/2  0 ])
+(def bottom [1/2  1 ])
