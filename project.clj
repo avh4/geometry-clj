@@ -1,4 +1,4 @@
-(defproject net.avh4.math/geometry-clj "0.0.2"
+(defproject net.avh4.math/geometry-clj "0.0.3-SNAPSHOT"
   :description "Geometry functions"
   :url "http://github.com/avh4/geometry-clj"
   :license {:name "Eclipse Public License"
