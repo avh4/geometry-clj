@@ -3,6 +3,7 @@
   :url "http://github.com/avh4/geometry-clj"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :scm {:name "git" :url "https://github.com/avh4/geometry-clj" }
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/math.numeric-tower "0.0.2"]]
   :source-paths   ["src/main/clojure"]
